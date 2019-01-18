@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Francosabolo_RegisterGuest>
+            <version>1.0.0</version>
+        </Francosabolo_RegisterGuest>
+    </modules>
+    <global>
+        <models>
+			<registerguest>
+                <class>Francosabolo_RegisterGuest_Model</class>
+            </registerguest>
+        </models>
+        <helpers>
+			<registerguest>
+                <class>Francosabolo_RegisterGuest_Helper</class>
+            </registerguest>
+        </helpers>
+        <events>
+            <sales_order_place_before>
+                <observers>
+                    <registerguest_model_place_after_observer>
+                        <type>singleton</type>
+                        <class>Francosabolo_RegisterGuest_Model_Observer</class>
+                        <method>registerGuestUser</method>
+                    </registerguest_model_place_after_observer>
+                </observers>
+            </sales_order_place_before>
+		</events>
+    </global>
+</config>

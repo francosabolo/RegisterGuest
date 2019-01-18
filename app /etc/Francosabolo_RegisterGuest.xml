@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Francosabolo_RegisterGuest>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Francosabolo_RegisterGuest>
+    </modules>
+</config>
